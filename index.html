@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>КПК Сталкера</title>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>КПК «Шепот Зоны»</h1>
+      <div id="time">--:--</div>
+    </header>
+    <nav>
+      <button onclick="switchTab('svodka')">СВОДКА</button>
+      <button onclick="switchTab('tasks')">ЗАДАЧИ</button>
+      <button onclick="switchTab('map')">КАРТА</button>
+      <button onclick="switchTab('rumors')">СЛУХИ</button>
+      <button onclick="switchTab('inventory')">ИНВЕНТАРЬ</button>
+    </nav>
+    <main>
+      <section id="svodka" class="tab active">
+        <div class="welcome"></div>
+        <div id="alerts"></div>
+      </section>
+      <section id="tasks" class="tab">
+        <ul id="task-list"></ul>
+      </section>
+      <section id="map" class="tab">
+        <img id="map-image" src="assets/map-placeholder.jpg" alt="Карта Зоны">
+        <div id="markers"></div>
+      </section>
+      <section id="rumors" class="tab">
+        <ul id="rumor-list"></ul>
+      </section>
+      <section id="inventory" class="tab">
+        <ul id="inventory-list"></ul>
+      </section>
+    </main>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
